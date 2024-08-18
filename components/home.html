@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrient Form</title>
+<link rel="stylesheet" href="external.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top:20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 600px;
+  }
+  .card img {
+    width: 600px; /* Adjust as needed */
+    height: 700px;
+    margin-right: 20px;
+  }
+  .card-content {
+    flex: 1;
+    color: black;
+  }
+  
+</style>
+</head>
+<body>
+  
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Recommendations</button>
+            <div class="dropdown-content">
+                <a href="./organicmanure.html">Organic Manure Recommendations</a>
+                <a href="./crop.html">Crop Recommendations</a>
+            </div>
+        </div>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./help.html">Help</a>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-image: url('./images/agripic.png');">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active" style="height: 600px; margin-top: 100px;">
+          <img src="https://cdn.telanganatoday.com/wp-content/uploads/2022/09/Agriculture-1.jpg" width="1500" height="700%" class="center" >
+        </div>
+    
+        <div class="item card">
+          <img src="./images/soilimg.webp" alt="Image" width="400" height="500">
+          <div class="carousel-caption card-content" style="padding-left: 350px; margin-bottom: 100px;">
+            <h2>SOIL:The Essential Factor</h2>
+            <p>Soil is a fundamental and essential component in the agricultural domain, operating as a foundation for plant growth and development. It is a complex and volatile mixture of water, air, organic matter, dissolved minerals and many micro-organisms. Apart from providing plant roots structural support along with necessary nutrients, Soil also regulates circulation of water and acts as a habitat for numerous kinds of soil organisms that are vital to the cycling of nutrients and the good health of the soil. Understanding parameters of the soil and controlling them efficiently is crucial for long term production in the agriculture. Plants utilizes a variety of parameters in the soil to grow and flourish. The soil parameters are characteristics of the soil that influence the crop’s fertility, productivity and sustainability for various agricultural methods that involves in increasing the quality of the crop yield. These elements are also critical for evaluating soil condition, crop quality, soil quality for guiding agricultural management decisions. Depending on these parameters the crop growth alters from being deteriorating crop to blooming crop yield. These parameters are mainly divided into three types: physical parameters, Chemical parameters and biological parameters. </p>
+          </div>
+        </div>
+    
+        <div class="item card">
+          <div class="carousel-caption card-content"  style="padding-left: 350px; margin-bottom: 150px;">
+            <h2>Agriculture</h2>
+            <p>Agriculture plays a significant role in the Telangana’s Economy. For a significant portion of the people of Telangana, it provides a means of livelihood that involves not just the farmers but also numerous stake holders such as Agricultural labourers, Agro-Industry workers and traders etc. Telangana comprises of a variety of agro-climatic zones where up to 27 different major crops can be grown efficiently. However, this region is currently experiencing a significant challenge in balancing Agricultural production with the state’s expanding population. Even if the situation is resolved, yet continues to be obstacle because of the Quality of the food that need to be produced to meet nutritional demands of the growing population.</p>
+          </div>
+          <img src="./images/farmer.webp" style="margin-top: 70px;" alt="Image" width="400" height="500">
+        </div>
+        
+        <div class="item card">
+          <img src="./images/woman-female-field-grass.jpg" alt="Image" width="400" height="500">
+          <div class="carousel-caption card-content"  style="padding-left: 350px; margin-bottom: 150px;">
+            <h2>Challenges Faced by Farmers</h2>
+            <p>As India is still a developing country, most of the farmers are not well educated about all the parameters present in the soil and highly use chemical fertilizers for fast crop yield that may or may not produce the optimal results while harvesting the crop. Currently government uses Soil health card to provide the contents and their respective quantities present in an individual farmer’s fields and provide required recommendation manually. However manual calculations have constraints and can only provide approximate results. So, providing the results using computer science applications in the Agricultural domain will derive an accurate result. These applications must be user friendly that must be be highly understandable, provide the required knowledge for the best result and also give accurate recommendations for all the  real-time problems faced by the farmers.</p>
+          </div>
+        </div>
+
+        <div class="item card">
+          <div class="carousel-caption card-content"  style="padding-left: 350px;  margin-bottom: 150px;">
+            <h2>Technologies in Agriculture</h2>
+            <p>There are many emerging technologies in the computer science that are used for predictions and calculations. These capabilities can also be used by any other domain as long as there is sufficient data present. Some of these emerging technologies are Machine Learning, Artificial Intelligence, Quantum computing and block chain technology In Agricultural Domain, the applications of the technologies are mostly used for recommendation of crop and organic manure, however due to insufficient data at the early times, many developers considered the important parameters of the soil independently resulting in errors and non-accurate recommendations. But the problems that are arises are not in the technologies but Application and training of these algorithms itself. </p>
+          </div>
+          <img src="./images/technoagri.jpg" alt="Image" width="400" height="500">
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+</body>
+</html>

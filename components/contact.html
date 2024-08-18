@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="external.css">
+    <style>
+        * {
+    box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+    input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    /* Style the container/contact section */
+    .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" style="float: left; overflow: hidden;">Recommendations</button>
+            <div class="dropdown-content">
+                <a href="./organicmanure.html">Organic Manure Recommendations</a>
+                <a href="./crop.html">Crop Recommendations</a>
+            </div>
+        </div>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./help.html">Help</a>
+    </div>
+    <div>
+        <img src="./images/contact_us-e1506034679270.jpg" alt="" width="100%" height="100%">
+        <h1 style="text-align: center;">Contact Us</h1>
+        <h2>If not able to meet us, leave us a message!!!</h2>
+        <form action="/action_page.php">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+            <label for="pno">Phone Number</label>
+            <input type="text" id="pno" name="pno" placeholder="Your Phone Number..">
+            <br>
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div style="background-color: pink;">
+            <h1>Address</h1>
+            <p>VNR VJIET Campus, Vignana Jyothi Nagar, Pragathi Nagar, Nizampet (S.O), Hyderabad, Telangana, India - 500 090</p>
+            <h1>Email ID's</h1>
+            <hr />
+            <a href="#" class="font-semibold underline" >brahmanandareddy_a@vnrvjiet.in</a>
+            <br>
+            <a href="#" class="font-semibold underline" >aulugalavinay463@gmail.com</a>
+            <br>
+            <a href="#" class="font-semibold underline" >sudeepreddy2002@gmail.com</a>
+            <br>
+            <a href="#" class="font-semibold underline" >kopilaanurag2003@gmail.com</a>
+            <br>
+            <a href="#" class="font-semibold underline" >mail2sreejahnk@gmail.com</a>
+            <br>
+            <a href="#" class="font-semibold underline" >butaliramesh123@gmail.com</a>
+            <h1>Mobile Numbers</h1>
+            <hr />
+            <h2 style="text-align: left;">+91 9010008785</h2>
+            <h2 style="text-align: left;">+91 6304565302</h2>
+            <h2 style="text-align: left;">+91 9912486092</h2>
+            <h2 style="text-align: left;">+91 9652058366</h2>
+            <h2 style="text-align: left;">+91 7013596708</h2>
+            <h2 style="text-align: left;">+91 9948839968</h2>
+        </div>
+    </div>
+</body>
+</html>

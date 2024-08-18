@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="external.css">
+    <style>
+        #recommendations {
+            white-space: pre-line;
+            padding-left: 60px;
+        }
+        .form-details{
+            color:rgba(0, 0, 0, 0.56);
+            background-color: white;
+            border: none;
+            font-size: 16px;
+            text-align:left;
+            }
+        .form-function{
+            color:white;
+            background-color:green;
+            border: none;
+            font-size: 16px;
+            padding: 15px 32px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            margin-bottom: 10px;
+            display:block;
+        }
+        .organic-manure{
+            max-width: 1250px; 
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Recommendations</button>
+            <div class="dropdown-content">
+                <a href="./organicmanure.html">Organic Manure Recommendations</a>
+                <a href="./crop.html">Crop Recommendations</a>
+            </div>
+        </div>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./help.html">Help</a>
+    </div>
+        <div class="organic-manure" style="margin-left: 50px;">
+        <h2>Organic Manure Recommendations</h2>
+        <div class="form-group">
+            <button class="form-details" onclick="showSoilFields()">Soil Texture</button>
+        </div>
+        
+        <div id="soilFields" class="form-group" style="display:none;">
+            <label for="sand">Sand%:</label>
+            <input type="number" id="sand" name="sand">
+            <label for="clay">Clay%:</label>
+            <input type="number" id="clay" name="clay">
+            <label for="silt">Silt%:</label>
+            <input type="number" id="silt" name="silt">
+        </div>
+    
+        <div class="form-group">
+            <button  class="form-details" onclick="showNutrientType()">Nutrients</button>
+        </div>
+    
+        <div id="nutrientType" class="form-group" style="display:none;">
+            <label for="nutrientTypeSelect">Select Nutrient Type:</label>
+            <select id="nutrientTypeSelect" onchange="showNutrientFields()">
+                <option value="">Select</option>
+                <option value="macro">Macro Nutrients</option>
+                <option value="micro">Micro Nutrients</option>
+            </select>
+        </div>
+    
+        <div id="nutrientFields" style="display:none;">
+            <!-- Macro Nutrient Fields -->
+            <div id="macroFields" class="form-group">
+                <label for="N">NNO3:</label>
+                <input type="number" id="N" name="N">
+                <label for="P">P:</label>
+                <input type="number" id="P" name="P">
+                <label for="K">K:</label>
+                <input type="number" id="K" name="K">
+                <label for="CACO3">CACO3:</label>
+                <input type="number" id="CACO3" name="CACO3">
+                <label for="Mg">Mg:</label>
+                <input type="number" id="Mg" name="Mg">
+            </div>
+    
+            <!-- Micro Nutrient Fields -->
+            <div id="microFields" class="form-group">
+                <label for="iron">Fe:</label>
+                <input type="number" id="iron" name="iron">
+                <label for="zinc">Zn:</label>
+                <input type="number" id="zinc" name="zinc">
+                <label for="copper">Cu:</label>
+                <input type="number" id="copper" name="copper">
+                <label for="Mn">Mn:</label>
+                <input type="number" id="Mn" name="Mn">
+                <label for="B">B:</label>
+                <input type="number" id="B" name="B">
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <button class="form-details" onclick="showOtherParameters()">Other Parameters</button>
+        </div>
+    
+        <div id="otherParameters" class="form-group" style="display:none;">
+            <label for="pH">pH:</label>
+            <input type="number" id="pH" name="pH">
+            <label for="salinity">Salinity:</label>
+            <input type="number" id="salinity" name="salinity">
+            <label for="EC">EC:</label>
+            <input type="number" id="EC" name="EC">
+            <label for="OM">OM:</label>
+            <input type="number" id="OM" name="OM">
+        </div>
+    
+        <div class="form-group">
+            <button class="form-details" onclick="showCropOptions()">Crop</button>
+        </div>
+    
+        <div id="cropOptions" class="form-group" style="display:none;">
+            <label for="crop">Select Crop:</label>
+            <select id="crop" name="crop">
+                <option value="barley">Barley</option>
+                <option value="brinjal">Brinjal</option>
+                <option value="cabbage">Cabbage</option>
+                <option value="castor">Castor</option>
+                <option value="chickpeas">Chickpeas</option>
+                <option value="chillies">Chillies</option>
+                <option value="cotton">Cotton</option>
+                <option value="ginger">Ginger</option>
+                <option value="greengram">Greengram</option>
+                <option value="greenpeas">Greenpeas</option>
+                <option value="groundnut">Groundnut</option>
+                <option value="maize">Maize</option>
+                <option value="mango">Mango</option>
+                <option value="mustard">Mustard</option>
+                <option value="paddy">Paddy</option>
+                <option value="pearlmillet">Pearlmillet</option>
+                <option value="pigeonpeas">Pigeonpeas</option>
+                <option value="potato">Potato</option>
+                <option value="sesame">Sesame</option>
+                <option value="sorghum">Sorghum</option>
+                <option value="soybeans">Soybeans</option>
+                <option value="sugarcane">Sugarcane</option>
+                <option value="sunflower">Sunflower</option>
+                <option value="tomato">Tomato</option>
+                <option value="turmeric">Turmeric</option>
+                <option value="watermelon">Watermelon</option>
+                <option value="wheat">Wheat</option>
+            </select>
+        </div>
+        <button class="form-function" type="button" onclick="generateQuery1()">Generate Query</button>
+        <button  class="form-function" type="button" onclick="applyQuery()">Apply Query</button>
+    </div>
+    <p id="recommendations"> </p>
+
+    <script>
+    
+    function showNutrientType() {
+        var nutrientTypeDiv = document.getElementById("nutrientType");
+        nutrientTypeDiv.style.display = "block";
+        
+    }
+
+    function showNutrientFields() {
+        var nutrientTypeSelect = document.getElementById("nutrientTypeSelect");
+        var nutrientFieldsDiv = document.getElementById("nutrientFields");
+        var macroFieldsDiv = document.getElementById("macroFields");
+        var microFieldsDiv = document.getElementById("microFields");
+
+        if (nutrientTypeSelect.value === "macro") {
+            macroFieldsDiv.style.display = "block";
+            microFieldsDiv.style.display = "none";
+        } else if (nutrientTypeSelect.value === "micro") {
+            macroFieldsDiv.style.display = "none";
+            microFieldsDiv.style.display = "block";
+        } else {
+            macroFieldsDiv.style.display = "none";
+            microFieldsDiv.style.display = "none";
+        }
+
+        nutrientFieldsDiv.style.display = "block";
+    }
+    function showSoilFields() {
+        var soilFieldsDiv = document.getElementById("soilFields");
+        soilFieldsDiv.style.display = "block";
+    }
+    function showOtherParameters() {
+        var otherParametersDiv = document.getElementById("otherParameters");
+        otherParametersDiv.style.display = "block";
+        
+    }
+
+    function showCropOptions() {
+            var cropOptionsDiv = document.getElementById("cropOptions");
+            cropOptionsDiv.style.display = "block";
+    }
+
+    async function generateQuery1() {
+        
+        const pH = document.getElementById('pH').value;
+        const salinity = document.getElementById('salinity').value;
+        const EC = document.getElementById('EC').value;
+        const Crop = document.getElementById('crop').value;
+        const OM = document.getElementById('OM').value;
+        const N= document.getElementById('N').value;
+        const P = document.getElementById('P').value;
+        const K = document.getElementById('K').value;
+        const Ca = document.getElementById('CACO3').value;
+        const Mg = document.getElementById('Mg').value;
+        const B = document.getElementById('B').value;
+        const Cu = document.getElementById('copper').value;
+        const Zn = document.getElementById('zinc').value;
+        const Mn = document.getElementById('Mn').value;
+        const Fe = document.getElementById('iron').value;
+        const Sand = document.getElementById('sand').value;
+        const Clay = document.getElementById('clay').value;
+        const Silt = document.getElementById('silt').value;
+        const sparqlQuery = `
+        SELECT DISTINCT ?OrganicManure
+        WHERE { 
+                BIND(${pH} AS ?pH1)
+                BIND(${salinity} AS ?salinity1)
+                BIND(${EC} AS ?EC1)
+                BIND(${OM} AS ?OM1)
+                BIND(${N} AS ?N1)
+                BIND(${P} AS ?P1)
+                BIND(${K} AS ?K1)
+                BIND(${Ca} AS ?Ca1)
+                BIND(${Mg} AS ?Mg1)
+                BIND(${B} AS ?B1)
+                BIND(${Cu} AS ?Cu1)
+                BIND(${Fe} AS ?Fe1)
+                BIND(${Zn} AS ?Zn1)
+                BIND(${Mn} AS ?Mn1)
+                BIND(${Sand} AS ?Sand)
+                BIND(${Clay} AS ?Clay)
+                BIND(${Silt} AS ?Silt)
+                ?Organic_Manure  rdf:type ?OrganicManure; soil:hasSandPercent ?SandPercent; soil:hasClayPercent ?ClayPercent; soil:hasSiltPercent ?SiltPercent; soil:hasPH ?pH; soil:hasEC ?EC; soil:hasOrganicMatter ?OM; soil:hasCalcium ?CACO3_ppm; soil:hasNitrogen ?NNO3_ppm; soil:hasSalinity ?Salinity; soil:hasZinc ?Zn_ppm; soil:hasCopper ?Cu_ppm; soil:hasManganese ?Mn_ppm; soil:hasBoron ?B_ppm; soil:hasPhosporous ?P_ppm; soil:hasPotassium ?K_ppm; soil:hasIron ?Fe_ppm; soil:hasMagnesium ?Mg_ppm; soil:hasCrop ?Crop .
+                BIND(?pH - 0.902 AS ?minRange1)
+                BIND(?pH + 0.902 AS ?maxRange1)
+                BIND(?Salinity - 1.21 AS ?minRange2)
+                BIND(?Salinity + 1.21 AS ?maxRange2)
+                BIND(?EC - 0.304 AS ?minRange3)
+                BIND(?EC + 0.304 AS ?maxRange3)
+                BIND(?OM - 0.63 AS ?minRange4) BIND(?OM + 0.63 AS ?maxRange4) BIND(?SandPercent - 10.98 AS ?minRange5) BIND(?SandPercent + 10.98 AS ?maxRange5) BIND(?ClayPercent - 11.29 AS ?minRange6) BIND(?ClayPercent + 11.29 AS ?maxRange6) BIND(?SiltPercent - 8.43 AS ?minRange7) BIND(?SiltPercent + 8.43 AS ?maxRange7) BIND(?CACO3_ppm - 13.41 AS ?minRange8) BIND(?CACO3_ppm + 13.41 AS ?maxRange8) BIND(?NNO3_ppm - 11.04 AS ?minRange9) BIND(?NNO3_ppm + 11.04 AS ?maxRange9) BIND(?Zn_ppm - 0.68 AS ?minRange10) BIND(?Zn_ppm + 0.68 AS ?maxRange10) BIND(?Cu_ppm - 2.46 AS ?minRange11) BIND(?Cu_ppm + 2.46 AS ?maxRange11) BIND(?Mn_ppm - 15.3 AS ?minRange12) BIND(?Mn_ppm + 15.3 AS ?maxRange12) BIND(?B_ppm - 0.21 AS ?minRange13) BIND(?B_ppm + 0.21 AS ?maxRange13) BIND(?P_ppm - 14.57 AS ?minRange14) BIND(?P_ppm + 14.57 AS ?maxRange14) BIND(?K_ppm - 196.45 AS ?minRange15) BIND(?K_ppm + 196.45 AS ?maxRange15) BIND(?Fe_ppm - 25.92 AS ?minRange16) BIND(?Fe_ppm + 25.92 AS ?maxRange16) BIND(?Mg_ppm - 748.06 AS ?minRange17) BIND(?Mg_ppm + 748.06 AS ?maxRange17)
+        FILTER (?Crop="${Crop}" && ?pH >= ?minRange1 && ?pH <= ?maxRange1 && ?Salinity >= ?minRange2 && ?Salinity <= ?maxRange2 && ?EC >= ?minRange3 && ?EC <= ?maxRange3 && ?OM >= ?minRange4 && ?OM <= ?maxRange4 && ?SandPercent >= ?minRange5 && ?SandPercent <= ?maxRange5 && ?ClayPercent >= ?minRange6 && ?ClayPercent <= ?maxRange6 && ?SiltPercent >= ?minRange7 && ?SiltPercent <= ?maxRange7 && ?CACO3_ppm >= ?minRange8 && ?CACO3_ppm <= ?maxRange8 && ?NNO3_ppm >= ?minRange9 && ?NNO3_ppm <= ?maxRange9 && ?Zn_ppm >= ?minRange10 && ?Zn_ppm <= ?maxRange10 && ?Cu_ppm >= ?minRange11 && ?Cu_ppm <= ?maxRange11 && ?Mn_ppm >= ?minRange12 && ?Mn_ppm <= ?maxRange12 && ?B_ppm >= ?minRange13 && ?B_ppm <= ?maxRange13 && ?P_ppm >= ?minRange14 && ?P_ppm <= ?maxRange14 && ?K_ppm >= ?minRange15 && ?K_ppm <= ?maxRange15 && ?Fe_ppm >= ?minRange16 && ?Fe_ppm <= ?maxRange16 && ?Mg_ppm >= ?minRange17 && ?Mg_ppm <= ?maxRange17)
+        }
+        ORDER BY ABS(?pH - ?pH1) ABS(?Salinity - ?salinity1) ABS(?EC - ?EC1) ABS(?SandPercent - ?Sand) ABS(?ClayPercent - ?Clay) ABS(?SiltPercent - ?Silt) ABS(?OM - ?OM1) ABS(?CACO3_ppm - ?Ca1) ABS(?NNO3_ppm - ?N1) ABS(?Zn_ppm - ?Zn1) ABS(?Cu_ppm - ?Cu1) ABS(?Mn_ppm - ?Mn1) ABS(?B_ppm - ?B1) ABS(?P_ppm - ?P1) ABS(?K_ppm - ?K1) ABS(?Fe_ppm - ?Fe1) ABS(?Mg_ppm - ?Mg1)
+        LIMIT 4`;
+        document.getElementById('recommendations').innerHTML = sparqlQuery;
+    }
+
+    async function applyQuery() {
+        const sparqlQuery = document.getElementById('recommendations').innerHTML;
+        console.log(sparqlQuery)
+        const response = await fetch('http://localhost:8080/apply-query', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({sparqlQuery}) 
+        });
+            const data = await response.json();
+            console.log(data)
+            const { recommendations } = data;
+            console.log('Recommendations:', recommendations);
+
+            // Display the recommendations
+            // document.getElementById('recommendations').innerHTML = data;
+            // document.getElementById('recommedations').innerHTML=v;
+            var s="";
+            for(var i=0;i<data.length;i++){
+                s+=data[i]+"\n";
+            }
+            document.getElementById('recommendations').innerHTML=s;
+    }
+    
+    </script>
+</body>
+</html>

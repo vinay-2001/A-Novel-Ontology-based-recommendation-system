@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>agriculture-1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>agriculture-1</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.jena</groupId>
+		    <artifactId>jena-arq</artifactId>
+		    <version>5.0.0-rc1</version>
+		</dependency>
+		
+		<!-- OWL API for working with OWL ontologies -->
+	    <dependency>
+	        <groupId>net.sourceforge.owlapi</groupId>
+	        <artifactId>owlapi-distribution</artifactId>
+	        <version>5.1.14</version>
+	    </dependency>
+	
+	   <!-- https://mvnrepository.com/artifact/org.protege/protege-editor-owl -->
+		<dependency>
+		    <groupId>org.protege</groupId>
+		    <artifactId>protege-editor-owl</artifactId>
+		    <version>4.1.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.protege/protege-editor-core-application -->
+		<dependency>
+		    <groupId>org.protege</groupId>
+		    <artifactId>protege-editor-core-application</artifactId>
+		    <version>4.1.0</version>
+		</dependency>
+
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<resources>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <includes>
+	                <include>agricultureontology.owl</include>
+	            </includes>
+	        </resource>
+	    </resources>
+	</build>
+
+</project>
